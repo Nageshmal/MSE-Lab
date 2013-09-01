@@ -1,0 +1,23 @@
+ Protocols vs Subclasses in Objective C
+
+ A protocol is used to declare methods and properties that are independent of any specific class.
+ The basic syntax to define a protocol is:
+ @protocol ProtocolName
+ // list of methods and properties
+ @end
+ 
+ Protocols can include declarations for both instance methods and class methods, as well as properties.
+ 
+ It’s also possible to specify optional methods in a protocol. These are methods that a class can implement only if it needs to.
+ 
+ A subclass inherits methods and instance variables from its superclass.
+
+ To have a subclass called subclassname with classname as superclass,the syntax is:
+ 
+ @interface subclassname : classname {
+ // instance variables that subclassname has but classname lacks go here
+ }
+ // methods that subclassname has and classname may or may not go here. If both have it, subclassname's implementation override's classname's so long as an instance of subclassname is references.
+ @end
+ 
+ A subclass can override a method it inherits from the class it is based on. The class it is based on is called its superclass. Hence inheriting the variables and methods through which super class can be modified. 
